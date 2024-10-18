@@ -1,0 +1,36 @@
+.cta-button {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-out; /* Smooth transition when it appears */
+  }
+  
+  .cta-button.animated {
+    animation: pulse 2s infinite; /* Start animation when class is added */
+    opacity: 1; /* Make it visible */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  .temp-item {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); 
+    transform: translateX(50px);/* Shift down */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Smooth transition */
+}
+
+.temp-item.animated {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); 
+    transform: translateX(0);/* Moves to its original position */
+}
+  

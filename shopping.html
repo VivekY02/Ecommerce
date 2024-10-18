@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop the best plant-based leather products from Banofi.">
+    <title>Shop - Feels</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="stylesheet" href="shopping.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-container">
+            <a href="founder.html">
+                <img src="logo2.png" alt="Feels Logo" class="logo" id="companyLogo">
+            </a>   
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="shopping.html" class="nav-button">Shop</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+     
+ <!--       <section class="products">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="product-cards">
+                    <div class="product-card">
+                        <img src="bag.jpg" alt="  Leather Bag" class="product-image">
+                        <h3>Leather Bag</h3>
+                        <p>Price: ₹15000</p>
+                        <button id="rzp-button1" class="buy-button" data-amount="500">Buy Now</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="shoes.jpg" alt="  Leather Shoes" class="product-image">
+                        <h3>Leather Shoes</h3>
+                        <p>Price: ₹5000</p>
+                        <button id="rzp-button2" class="buy-button" data-amount = "1000">Buy Now</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="wallet.jpg" alt="  Leather Wallet" class="product-image">
+                        <h3>  Leather Wallet</h3>
+                        <p>Price: ₹3000</p>
+                        <button id="rzp-button3" class="buy-button" data-amount = "300">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <div class="desktop-1">
+            <main class="automotive-interior-leather-ma-parent">
+              <img
+                class="automotive-interior-leather-ma-icon"
+                alt=""
+                src="public/Automotive-Interior-Leather-Market.jpg"
+              />
+      
+              <img
+                class="f6-b615-24d3147d3bb6-1-icon"
+                loading="lazy"
+                alt=""
+                src="public/64497395-6037-43f6-b615-24d3147d3bb6.png"
+              />
+      
+              <img
+                class="introducing-indias-first-apple-icon"
+                loading="lazy"
+                alt=""
+                src="public/Introducing-Indias-first-Apple-Skin-Leather-Handbags-Image-1-1 (1).jpg"
+              />
+            </main>
+            <div class="vladakarpovich">
+              <img
+                class="pexels-vlada-karpovich-4452378-icon"
+                loading="lazy"
+                alt=""
+                src="public/pexels-vlada-karpovich-4452378.jpg"
+              />
+      
+              <img
+                class="ec9b2883-f0bd-4284-ba05-61d114-icon"
+                loading="lazy"
+                alt=""
+                src="public/ec9b2883-f0bd-4284-ba05-61d114f2814d.jpg"
+              />
+            </div>
+            <img
+              class="screenshot-2024-07-26-232613-1"
+              loading="lazy"
+              alt=""
+              src="public/Screenshot 2024-07-26 232613.png"
+            />
+      
+            <img
+              class="b014913-680d-4963-933b-6d7eead-icon"
+              loading="lazy"
+              alt=""
+              src="public/7b014913-680d-4963-933b-6d7eead8ba92.jpg"
+            />
+          </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Feels Leather. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+                const buyButtons = document.querySelectorAll(".buy-button");
+
+                buyButtons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        const amount = this.getAttribute("data-amount");
+                        processPayment(amount);
+                    });
+                });
+            });
+        function initiatePayment(amount, description) {
+            var options = {
+                "key": "rzp_test_u1PbD5UevKpF3f",
+                "amount": amount, // Amount in paise
+                "currency": "INR",
+                "name": "Feels",
+                "description": description,
+                "image": "logo.png",
+                "handler": function (response) {
+                    window.location.href = "order-confirmation.html?payment_id=" + response.razorpay_payment_id;
+                },
+                "prefill": {
+                    "name": "Customer Name",
+                    "email": "customer@example.com",
+                    "contact": "9999999999"
+                },
+                "notes": {
+                    "address": "Customer Address"
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+            var rzp = new Razorpay(options);
+            rzp.open();
+        }
+
+        document.getElementById('rzp-button1').onclick = function(e){
+            initiatePayment("50000", "  Leather Bag");
+            e.preventDefault();
+        }
+
+        document.getElementById('rzp-button2').onclick = function(e){
+            initiatePayment("100000", "  Leather Shoes");
+            e.preventDefault();
+        }
+
+        document.getElementById('rzp-button3').onclick = function(e){
+            initiatePayment("30000", "  Leather Wallet");
+            e.preventDefault();
+        }
+    </script>
+    <script>
+        document.addEventListener('scroll', function () {
+                const header = document.getElementById('main-header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            window.addEventListener('scroll', function () {
+                    const logo = document.getElementById('companyLogo');
+
+                    if (window.scrollY > 50) {  // Change '50' to any value where you want the logo to change
+                        logo.src = 'logo.png';  // Path to the new logo when scrolling down
+                    } else {
+                        logo.src = 'logo2.png';  // Path to the original logo
+                    }
+                });
+
+
+    </script>
+    
+</body>
+</html>

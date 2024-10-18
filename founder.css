@@ -1,0 +1,169 @@
+/* Import the Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+/* Import the Butler font */
+@import url('https://fonts.googleapis.com/css2?family=Butler:wght@400;700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+
+header {
+    background: #fff;
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 80px;
+    padding: 0 20px; /* Adjust padding if needed */
+}
+
+header .logo {
+    height: 55px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 60px; /* Add significant gap between items */
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #171717;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    font-family:'Courier New', Courier, serif; /* Apply a cool font style */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header nav ul li a:hover {
+    color:#23aa2a; /* Change color on hover for a cool effect */
+    
+}
+
+
+
+
+nav .nav-button {
+    background: #ff5733;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    font-family: 'Butler', sans-serif; /* Apply a cool font style */
+    border: 2px solid transparent; /* Initially, set border to transparent to avoid layout shift */
+    transition: all 0.3s ease; 
+    margin-left: 300px;
+   
+}
+#main-header.scrolled nav .nav-button{
+    color: white;
+}
+nav .nav-button:hover {
+    border-width: 2px;
+    color: #23aa2a;
+   
+    border-color: #23aa2a;
+    border-style: solid;
+    background-color:white;
+   
+    
+}
+body{
+    font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+.sneha{
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+    
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+
+    margin-top: 50px;
+
+}
+
+.content {
+    text-align: center;
+   /* Adjust this value to control the space between the image and the text */
+}
+
+.content h1 {
+    font-size: 3em; /* Adjust the font size as needed */
+    color: #333; /* Adjust the text color as needed */
+
+}
+.about {
+  
+    width: 70%;
+    margin-left: 15%;
+    text-align: justify;
+
+    font-size: 20px;
+    color: black;
+   
+
+}
+.education{
+  
+    
+    width: 70%;
+    margin-left: 15%;
+
+}
+.sneha2{
+    height: 350px;
+    width: 300px;
+    margin-right: 15%;
+
+}
+.education-photo{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+
+}
+.bgimg{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;/* Scales the video to cover the element */
+    z-index: -1; /* Place video behind other content */
+    opacity: 0.5; /* Adjust opacity if needed */
+}
